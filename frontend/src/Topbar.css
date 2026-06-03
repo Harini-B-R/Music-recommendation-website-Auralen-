@@ -1,0 +1,127 @@
+/* .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+.topbar .search {
+  flex: 1;
+  max-width: 500px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: white;
+}
+
+.topbar .avatar {
+  margin-left: 16px;
+  background: #1db954;
+  color: black;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.topbar .menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.topbar .menu-item {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+} */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Search bar */
+.topbar .search {
+  flex: 1;
+  max-width: 480px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  outline: none;
+  background: var(--surface);
+  color: var(--text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.topbar .search:focus {
+  border: 1px solid var(--brand2);
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
+}
+
+/* Avatar */
+.topbar .avatar {
+  margin-left: 16px;
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+}
+
+/* Dropdown menu */
+.topbar .menu {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: var(--surface-2);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  min-width: 140px;
+}
+
+.topbar .menu-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.topbar .menu-item:hover {
+  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  color: white;
+}

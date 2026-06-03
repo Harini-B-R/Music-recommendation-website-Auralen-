@@ -1,0 +1,58 @@
+.sidebar {
+  width: 240px;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid var(--border);
+  min-height: 100vh;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Brand logo */
+.sidebar .brand {
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--brand), var(--brand2), var(--hot));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Navigation items */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar .nav-item {
+  background: transparent;
+  border: none;
+  text-align: left;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.sidebar .nav-item:hover {
+  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  color: white;
+  font-weight: 600;
+  transform: translateX(5px);
+}
+
+/* Active state */
+.sidebar .nav-item.active {
+  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  color: white;
+  font-weight: 700;
+}
